@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript for Web Development Project</title>
+    <link rel="stylesheet" media="screen" href="/css/algo_style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/d3.min.js"></script>
+    <script src="/js/sorting_algo.js"></script>
+  </head>
+  <body>
+    <section class="intro" id="intro">
+      <header>
+        <div id = 'classname'><h1>Javascript for Web Development</h1></div>
+        <div id = 'subject'><h2>Visualizing Sorting Algorithms</h2>
+           <div id = 'star_relative'>
+            <span class="star_tooltip">Home</span>
+          <img src = '/css/icon-star-01.svg'></img>
+        </div>
+        <div>
+      </header>
+      <div class="summary" id="summary">
+        <div class = "intro_txt">
+          <p>
+          This document is inspired by Mike Bostock's famous blog post
+          <a href='https://bost.ocks.org/mike/algorithms/'>Visualizing Algorithms</a>, and implemented using his fantastic d3.js
+          library. While Mike's article is widely spread on several algorithms
+          including sampling, shuffling, sorting and maze generation, I am
+          specifically interested in learning and researching on sorting
+          algorithms. 
+          <br/><br/>
+          Based on the Wikipedia entry of <a href='https://en.wikipedia.org/wiki/Sorting_algorithm'>sorting algorithms</a>, I
+          selected 3 most popular sorting algorithms in my study: </p>
+          <ul>
+          <li>Quick Sort</li>
+          <li>Merge Sort</li>
+          <li>Insertion Sort </li>
+          </ul>
+          <p>Please click on the following icons to see the visualization of each sort.</p>
+        </div>
+        <div id = 'imgbox'>
+        <div class='icon_img' id='img1'><img src = '/css/icon-circles-01.svg' onclick="document.location=document.location.toString().split('#')[0] + '#quicksort';return false;" ></img>
+          <span class="img_tooltip">Quick Sort</span></div>
+        <div class='icon_img' id='img2'><img  src = '/css/icon-black-circle-01.svg' onclick="document.location=document.location.toString().split('#')[0] + '#mergesort';return false;"></img>
+          <span class="img_tooltip">Merge Sort</span></div>
+        <div class='icon_img' id='img3'><img  src = '/css/icon-zigzag-01.svg' onclick="document.location=document.location.toString().split('#')[0] + '#insertionsort';return false;"></img>
+          <span class="img_tooltip">Insertion Sort</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="main" id="main">
+      <div id="quicksort" class="animation shuffle">
+      <h3>Quick Sort</h3>
+      <div class = 'back_btn'> 
+        <div class = 'back_relative'>
+        <img src = '/css/icon-star-01.svg' onclick="document.location=document.location.toString().split('#')[0] + '#';return false;" ></img>
+      <span class = 'backbtn_tooltip'>Back to home</span> </div>
+    </div>
+      <p>
+        QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways. </p>
+        <ul>
+        <li>Always pick first element as pivot.</li>
+        <li>Always pick last element as pivot.</li>
+        <li>Pick a random element as pivot.</li>
+        <li> median as pivot (implemented below)</li></ul>
+        <p>The key process in quickSort is partition(). Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time.
+      </p>
+    </br>
+      <div id = 'quicksort_vis' class='sort_vis'>
+        <div id='notes' class='notes'> <span class='span_msg' id='quicksort_msg'>Click Play to start</span> </div>
+        <script>
+          quicksort_vis();
+        </script>
+        </div>
+      </div>
+      <div class="animation shuffle" id="mergesort">
+      <h3>Merge Sort</h3>
+      <div class = 'back_btn'> 
+        <div class = 'back_relative'>
+        <img src = '/css/icon-star-01.svg' onclick="document.location=document.location.toString().split('#')[0] + '#';return false;" ></img>
+      <span class = 'backbtn_tooltip'>Back to home</span> </div>
+    </div>
+      <p>
+        Unlike quicksort, which operates in-place by performing swaps, mergesort requires an extra copy of the array. This extra space is used to merge sorted subarrays, combining the elements from pairs of subarrays while preserving order. Since mergesort performs copies instead of swaps, we must modify the animation accordingly (or risk misleading readers).
+</p><p>
+        Mergesort works from the bottom-up. Initially, it merges subarrays of size one, since these are trivially sorted. Each adjacent subarray — at first, just a pair of elements — is merged into a sorted subarray of size two using the extra array. Then, each adjacent sorted subarray of size two is merged into a sorted subarray of size four. After each pass over the whole array, mergesort doubles the size of the sorted subarrays: eight, sixteen, and so on. Eventually, this doubling merges the entire array and the algorithm terminates.
+       </p></br>
+      <div id = 'mergesort_vis' class='sort_vis'>
+        <div id='notes' class='notes'> <span class='span_msg' id='mergesort_msg'>Click Play to start</span> </div>
+          <script>
+           mergeSort();
+          </script>
+   </div>
+    </div>
+      <div class="animation shuffle" id="insertionsort">
+        <h3>Insertion Sort</h3>
+      <div class = 'back_btn'> 
+        <div class = 'back_relative'>
+        <img src = '/css/icon-star-01.svg' onclick="document.location=document.location.toString().split('#')[0] + '#';return false;" ></img>
+      <span class = 'backbtn_tooltip'>Back to home</span> </div>
+    </div>
+    <p>
+      Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, insertion sort provides several advantages:
+    </p><ul>
+      <li>Simple implementation</li>
+      <li>Efficient for (quite) small data sets, much like other quadratic sorting algorithms</li>
+      <li>More efficient in practice than most other simple quadratic algorithms such as selection sort or bubble sort</li>
+      <li>Adaptive, i.e., efficient for data sets that are already substantially sorted</li>
+      <li>Stable; i.e., does not change the relative order of elements with equal keys</li>
+      <li>In-place; i.e., only requires a constant amount of additional memory space</li>
+    </ul>
+  </br>
+    <div id = 'insertionsort_vis' class='sort_vis'>
+      <div id='notes' class='notes'> <span class='span_msg' id='insertionsort_msg'>Click Play to start</span> 
+      </div>
+      <script>
+       insertionSort();
+      </script>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>
