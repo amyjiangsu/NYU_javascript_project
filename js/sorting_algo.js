@@ -51,6 +51,7 @@ function quicksort_vis() {
 
   function click() {
     var actions = quicksort(array.slice()).reverse();
+    var pivot_txt;
 
     var text = gText
       .selectAll("text")
@@ -65,7 +66,7 @@ function quicksort_vis() {
 
     var transition = svg
       .transition()
-      .duration(500)
+      .duration(750)
       .each("start", function start() {
         var action = actions.pop();
 
@@ -78,14 +79,16 @@ function quicksort_vis() {
             } else if (action[2] == "end pivot") {
               msgbox.text(
                 text[0][action[0]].textContent +
-                  " is higher than pivot and " +
-                  text[0][action[1]].textContent +
+                  " is higher than pivot " +
+                  pivot_txt +
                   " -> swap"
               );
             } else {
               msgbox.text(
                 text[0][action[1]].textContent +
-                  " is higher than pivot and " +
+                  " is higher than pivot " +
+                  pivot_txt +
+                  " and " +
                   text[0][action[0]].textContent +
                   " -> swap"
               );
@@ -128,8 +131,9 @@ function quicksort_vis() {
             break;
           }
           case "partition": {
+            pivot_txt = text[0][action.pivot].textContent;
             msgbox.text(
-              "Current partition -> pivot " +
+              "New partition -> pivot " +
                 text[0][action.pivot].textContent +
                 "; segment: {" +
                 action.left +
@@ -358,12 +362,12 @@ function mergeSort() {
             e = (text1[j] = text0[i]),
             d = e.__data__;
           msgbox.text(
-            "sorting partition of {" +
+            "Sorting by segement of {" +
               cnt +
-              "} numbers: new array postion " +
-              (action[1] + 1) +
-              " = " +
-              text0[action[0]].textContent
+              "} numbers: move number " +
+              text0[action[0]].textContent +
+              " to position " +
+              (action[1] + 1)
           );
           d.index = j;
           d.array = (d.array + 1) & 1;
