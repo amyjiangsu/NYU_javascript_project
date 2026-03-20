@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <script type="text/javascript" src="resources/d3.js"></script>
+    <script type="text/javascript" src="resources/pic.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+<style>
+
+
+</style>
+  </head>
+  <body>
+    <div id="center">
+      <div id="cont">
+        <noscript>
+          Your browser does not support JavaScript or it is disabled.<br>
+          JavaScript is needed to view this site.
+        </noscript>
+        <div id="dots"></div>
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+      window.shownFile = 'none';
+
+      (function() {
+        var now = +new Date();
+        window.gaTrack = function(type, subtype) {
+          var time = Math.round((+new Date() - now) / 1000);
+          function doTrack() {
+            if (!window._gaq) return;
+            _gaq.push(['_trackEvent', String(type), String(subtype), window.location.href, time]);
+          }
+        }
+      })();
+
+      function track(type, subtype) {
+      }
+    </script>
+
+    <script type="text/javascript">
+   
+      (function() {
+        window.shownFile = 'none';
+
+        if (!pic.supportsCanvas()) {
+          track('NoCanvas', window.navigator.userAgent);
+          alert("Sorry, KoalsToTheMax needs HTML5 Canvas support which your browser does not have. Supported browsers include Chrome, Safari, Firefox, Opera, and Internet Explorer 9, 10");
+          return;
+        }
+
+        if (!pic.supportsSVG()) {
+          track('NoSVG', window.navigator.userAgent);
+          alert("Sorry, KoalsToTheMax needs SVG support which your browser does not have. Supported browsers include Chrome, Safari, Firefox, Opera, and Internet Explorer 9, 10");
+          return;
+        }
+
+        if (!window.d3) {
+          track('NoD3', window.navigator.userAgent);
+          alert("Some how D3 was not loaded so the site can not start. This is bad... We are investigating. Try refreshing the page and see if that helps.");
+          return;
+        }
+
+
+        try {
+          function utf8_to_b64(str) {
+            return window.btoa(unescape(encodeURIComponent(str)));
+          }
+
+          function b64_to_utf8(str) {
+            return decodeURIComponent(escape(window.atob(str)));
+          }
+
+          function goToHidden(location, string) {
+            location.href = '//' + location.host + location.pathname + '?' + utf8_to_b64(string);
+			console.print(location.href);
+          }
+
+          function basicLoad(location) {
+            var possible = ['ny', 'ny', 'ny', 'ny'];
+            var file = 'img/' + possible[Math.floor(Math.random() * possible.length)] + '.jpg'
+            return {
+              file: file,
+              shownFile: location.protocol + '//' + location.host + location.pathname + file
+            };
+          }
+
+          function parseUrl(location) {
+            var href = location.href;
+            var idx, param, file;
+
+            idx = href.indexOf('?');
+            if (idx === -1 || idx === href.length - 1) {
+              return basicLoad(location); // Case 1
+            }
+
+            param = href.substr(idx + 1);
+            if (!/^[a-z0-9+\/]+=*$/i.test(param)) {
+              goToHidden(location, param);
+              return null;
+            }
+
+            // Case 2
+            try {
+              param = b64_to_utf8(param);
+            } catch (e) {
+              return basicLoad(location); // Invalid base64, do a basic load
+            }
+
+            try {
+              param = JSON.parse(param);
+            } catch (e) {
+              return {
+                file: param,
+                shownFile: param
+              };
+            }
+
+            // At this point param is a JS object
+            if (Array.isArray(param) && param.length) {
+              // Case 2b
+              file = param[Math.floor(Math.random() * param.length)];
+              return {
+                file: file,
+                shownFile: file
+              };
+            }
+
+            if (Array.isArray(param.images) && param.images.length) {
+              // Case 2c
+              file = param.images[Math.floor(Math.random() * param.images.length)];
+              return {
+                file: file,
+                shownFile: file,
+                background: param.background,
+                hideNote: param.hideNote
+              };
+            }
+
+            // Fall though
+            return basicLoad(location);
+          }
+
+          var parse = parseUrl(location);
+          if (!parse) return;
+          var file = parse.file;
+          window.shownFile = parse.shownFile;
+
+          if (parse.background) {
+            d3.select(document.body)
+              .style('background', parse.background);
+          }
+          if (parse.hideNote) {
+            d3.select('#footer')
+              .style('display', 'none');
+          }
+
+          if (/^https?:/.test(file)) {
+            file = "image-server.php?url=" + file;
+          }
+
+
+          var img = new Image();
+          img.onload = function() {
+            var colorData;
+            try {
+              colorData = pic.loadImage(this);
+            } catch (e) {
+              colorData = null;
+              track('BadLoad', "Msg: '" + e.message + "' file: '" + file + "'");
+              alert("Sorry, KoalsToTheMax could not load the image '" + file + "'");
+            }
+            if (colorData) {
+              pic.makeCircles("#dots", colorData);
+              track('GoodLoad', 'Yay');
+            }
+          };
+          img.src = file;
+        } catch (e) {
+          track('Problemo', String(e.message));
+        }
+
+      })();
+    </script>
+ 
+</body></html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Geographic Bounding Boxes</title>
+<style>
+@import url(../maps.css?85b2875);
+#map svg {
+  cursor: move;
+}
+path {
+  fill: none;
+  stroke: #000;
+}
+.background {
+  stroke: none;
+  fill: #eef;
+}
+.land {
+  stroke-width: .75px;
+  pointer-events: all;
+}
+.graticule {
+  stroke: #333;
+  stroke-width: .25px;
+}
+.bounds {
+  fill: #f00;
+  fill-opacity: .25;
+  stroke: #000;
+  stroke-width: 1px;
+  pointer-events: none;
+}
+.country:hover .bounds {
+  stroke-width: 2px;
+}
+.country:hover .land {
+  stroke-width: 1px;
+}
+.outline {
+  stroke: #000;
+  stroke-width: 1.5px;
+  fill: none;
+}
+.antimeridian {
+  stroke-dasharray: 5 5;
+}
+
+.example path.Polygon {
+  fill: url(#hatch);
+}
+.example text {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+</style>
+
+<p class="breadcrumbs"><a href="http://www.jasondavies.com/">Jason Davies</a> → <a href="../">Maps</a>
+
+<h1>Geographic Bounding Boxes</h1>
+<div id="map"></div>
+
+<div class="wrapper">
+  <p class="caption">A geographic bounding box for each country (including semi-independent regions) from Natural Earth’s <a href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/">1:110m Cultural Vectors</a>.
+
+  <p>A <a href="http://en.wikipedia.org/wiki/Minimum_bounding_box">minimum bounding box</a> in <i>geographic coordinates</i> is an area defined by minimum and maximum longitudes and latitudes.
+  <p>Computing bounding boxes in 2D is simple: track the minimum and maximum x- and y-coordinates point by point.
+  Assuming line segments are straight for both polylines and polygons, nothing else needs to be done.
+  <p>Why doesn’t this work for a sphere?
+
+  <h2>The Antimeridian</h2>
+  <p>Imagine a set of points clustered around the antimeridian at 180°E.
+  A 2D algorithm will find a bounding box with longitudes extending all the way from around -180° to around +180°, even if the true <i>minimum</i> bounding box has a much smaller width.
+  <p>A better approach is to compute the true minimum-width bounding box, even if it crosses the antimeridian.
+  <div class="example"></div>
+
+  <h2>Line Segments</h2>
+  <p>D3 treats line segments as great-circle arcs: two successive points define the minor arc of the great circle going through those points.
+  <p>Here we need to be even more careful than for points, since it matters whether or not the line crosses the antimeridian.
+  <div class="example"></div>
+
+  <p>In addition, intermediate points between the segment endpoints may have latitudes extending beyond the maximum or minimum endpoint latitude.
+  <div class="example"></div>
+
+  <h2>Polygons</h2>
+  <p>A polygon may contain any number of holes, and the location of its interior depends on the winding order of its vertices.
+  <p>In D3, if a polygon’s vertices wind around a point in a counter-clockwise direction, this means the point is outside the polygon.
+  Otherwise, it is inside <span id="inside"></span>.
+  <div class="example"></div>
+
+  <p>If a polygons vertices wind around either pole, this means the longitudes have maximum extent from 180°W to +180°E.
+  <div class="example"></div>
+
+  <p>Lastly, a polygon may contain either pole, even if its vertices do not extend to the pole, in which case the latitude extent is extended to the pole.
+  <div class="example"></div>
+
+  <h2>Further Reading</h2>
+  <p>The described behaviour is supported by <code>d3.geo.bounds</code> as of <a href="http://d3js.org">D3</a> version <a href="https://github.com/mbostock/d3/releases/tag/v3.1.7">3.1.7</a>.
+</div>
+
+<script src="d3.js"></script>
+<script src="topojson.js"></script>
+<script src="app.min.js"></script>
