@@ -1,0 +1,27 @@
+{
+   "name": "Pets",
+   "children": [
+   {
+   "name": "Amy",
+   "children": [
+    {
+     "name": "Cat: Lily", "size": 1
+    },
+    {
+     "name": "Cat: Ash", "size": 1
+    }
+   ]
+  },
+  {
+   "name": "James",
+   "children": [
+    {
+     "name": "Cat: Lily", "size": 1
+    },
+    {
+     "name": "Cat: Ash", "size": 1
+    }
+   ]
+  }
+    ]
+  }

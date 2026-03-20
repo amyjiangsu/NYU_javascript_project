@@ -1,0 +1,8 @@
+[
+{"name":"Manhattan","size":20,"imports":["Manhattan", "Queens", "Queens", "Queens", "Queens", "Queens", "Bronx","Staten Island","Brooklyn"]},
+{"name":"Queens","size":10,"imports":["Manhattan", "Queens", "Bronx","Staten Island","Brooklyn"]},
+{"name":"Bronx","size":1,"imports":["Manhattan", "Queens", "Bronx","Staten Island","Brooklyn"]},
+{"name":"Staten Island","size":3,"imports":["Manhattan", "Queens", "Bronx","Staten Island","Brooklyn"]},
+{"name":"Brooklyn","size":2,"imports":["Manhattan", "Queens", "Bronx","Staten Island","Brooklyn"]}
+
+]

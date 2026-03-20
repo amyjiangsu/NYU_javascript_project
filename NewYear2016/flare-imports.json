@@ -1,0 +1,13 @@
+[
+{"name":"Amy","size":20,"imports":["Work","School","School","School","School","Travel","Win","Win","Win","Win","Loss", "Reading","Writing","Writing","Pets"]},
+{"name":"James","size":10,"imports":["Work","Work","Work","Work","Travel","Travel","Travel","Travel","Social","Social","Win", "Loss", "Reading","Reading","Reading","Reading","Writing","Writing","Writing","Cooking","Cooking","Cooking","Cooking","Cooking","Pets"]},
+{"name":"Work","size":1,"imports":["Amy", "James", "James","James","James"]},
+{"name":"School","size":3,"imports":["Amy", "Amy", "Amy", "Amy", "Amy"]},
+{"name":"Travel","size":2,"imports":["Amy", "James", "James","James","James"]},
+{"name":"Win","size":2,"imports":["Amy", "Amy", "Amy","Amy","James"]},
+{"name":"Loss","size":2,"imports":["Amy", "James"]},
+{"name":"Reading","size":2,"imports":["Amy", "James", "James","James","James"]},
+{"name":"Writing","size":2,"imports":["Amy", "Amy", "James","James","James"]},
+{"name":"Cooking","size":2,"imports":["James", "James", "James","James","James"]},
+{"name":"Pets","size":2,"imports":["Amy", "James"]}
+]

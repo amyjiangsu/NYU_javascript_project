@@ -1,0 +1,76 @@
+{
+   "name": "Travel",
+   "children": [
+   {
+   "name": "Amy",
+   "children": [
+    {
+     "name": "Beijing, China", "size": 0.2
+    },
+    {
+     "name": "Oxford, England", "size": 0.2
+    },
+    {
+     "name": "Tofino, Canada", "size": 0.2
+    },
+    {
+     "name": "Malta", "size": 0.2
+    }, 
+    {
+     "name": "Boston, MA", "size": 0.2
+    }        
+
+   ]
+  },
+  {
+   "name": "James",
+   "children": [
+    {
+     "name": "Beijing, China", "size": 0.2
+    },
+    {
+     "name": "Oxford, England", "size": 0.4
+    },
+    {
+     "name": "Tofino, Canada", "size": 0.2
+    },
+    {
+     "name": "Malta", "size": 0.2
+    }, 
+    {
+     "name": "Boston, MA", "size": 0.2
+    }, 
+    {
+     "name": "Philadelphia, PA", "size": 3.0
+    },
+    {
+     "name": "Chicago, IL", "size": 0.6
+    },
+    {
+     "name": "Atlanta, GA", "size": 0.6
+    },
+    {
+     "name": "Minneapolis, MN", "size": 0.4
+    }, 
+    {
+     "name": "New Richmond, WI", "size": 0.4
+    },
+    {
+     "name": "Orlando, FL", "size": 0.2
+    },
+    {
+     "name": "Paris, France", "size": 0.2
+    },
+    {
+     "name": "Las Vegas, NV", "size": 0.2
+    },
+    {
+     "name": "Danbury, CT", "size": 0.2
+    }, 
+    {
+     "name": "Lincolnton, NC", "size": 0.2
+    }
+   ]
+  }
+  ]
+  }

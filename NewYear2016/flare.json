@@ -1,0 +1,212 @@
+{
+ "name": "Amy",
+ "children": [
+  {
+   "name": "Work",
+   "children": [
+    {
+     "name": "Summer intern in American Express", "size": 1
+    },
+    {
+     "name": "Graudate assistant in Fordham University", "size": 1
+    }
+   ]
+  },
+  {
+   "name": "School",
+   "children": [
+    {
+     "name": "Capstone project", "size": 1
+    },
+    {
+     "name": "Hackathon", "size": 1
+    },
+    {
+     "name": "MS Statistics",
+     "children": [
+    {
+     "name": "Database Management", "size": 1
+    },
+    {
+     "name": "Data Mining for Business", "size": 1
+    },
+    {
+     "name": "Web Analytics", "size": 1
+    },
+    {
+     "name": "Explanatory Models", "size": 1
+    },
+    {
+     "name": "Statistics Theory I", "size": 1
+    },
+    {
+     "name": "Statistics Theory II", "size": 1
+    },
+    {
+     "name": "Sampling Theory", "size": 1
+    },
+    {
+     "name": "Stat Method & Computation I", "size": 1
+    },
+    {
+     "name": "Data Algorithms for Analysis", "size": 1
+    },
+    {
+     "name": "Data Driven Marketing Decision", "size": 1
+    }
+   ]
+    },
+    {
+     "name": "Johns Hopkins Data Science Specialization", 
+     "children": [
+    {
+     "name": "Data Science Toolbox", "size": 1
+    },
+    {
+     "name": "R Programming", "size": 1
+    },
+    {
+     "name": "Getting and Cleaning Data", "size": 1
+    },
+    {
+     "name": "Exploratory Data Analysis", "size": 1
+    },
+    {
+     "name": "Reproducible Research", "size": 1
+    },
+    {
+     "name": "Statistical Inference", "size": 1
+    },
+    {
+     "name": "Regression Models", "size": 1
+    },
+    {
+     "name": "Practical Machine Learning", "size": 1
+    },
+    {
+     "name": "Developing Data Product", "size": 1
+    }
+   ]
+    },
+    {
+     "name": "Data visualization project", "size": 1
+    }
+
+   ]
+  },
+  {
+   "name": "Travel",
+   "children": [
+    {
+     "name": "Beijing, China", "size": 1
+    },
+    {
+     "name": "Oxford, England", "size": 1
+    },
+    {
+     "name": "Tofino, Canada", "size": 1
+    },
+    {
+     "name": "Malta", "size": 1
+    }    
+   ]
+  },
+  {
+   "name": "Loss",
+   "children": [
+    {
+     "name": "My Father: Jiang ZhenKui", "size": 1
+    }
+   ]
+  },
+  {
+   "name": "Win",
+   "children": [
+    {
+     "name": "Top 25% in Kaggle Walmart Competition", "size": 1
+    },
+    {
+     "name": "MS. Applied Statistics & Decision Making", "size": 1
+    },
+    {
+     "name": "A Full-Time offer in American Express", "size": 1
+    },
+    {
+     "name": "Certified Data Scientist in R", "size": 1
+    },
+    {
+     "name": "U.S. Permanent Resident Card ", "size": 1
+    }
+   ]
+  },
+    {
+   "name": "Reading",
+   "children": [
+    {
+     "name": "JavaScript, the Definitive Guide", "size": 1
+    },
+    {
+     "name": "JavaScript: The Good Parts", "size": 1
+    },
+    {
+     "name": "A Byte of Python", "size": 1
+    },
+    {
+     "name": "Dive Into Python", "size": 1
+    },
+    {
+     "name": "Pattern Recognition and Machine Learning", "size": 1
+    },
+    {
+     "name": "Machine Learning for Hackers", "size": 1
+    },
+    {
+     "name": "Elements of Statistical Learning", "size": 1
+    },
+    {
+     "name": "Applied Predictive Modeling", "size": 1
+    },
+    {
+     "name": "Data Visualization with D3.js Cookbook", "size": 1
+    },
+    {
+     "name": "Beautiful Evidence", "size": 1
+    },
+    {
+     "name": "Interactive Data Visualization", "size": 1
+    }
+   ]
+  },
+    {
+   "name": "Writing",
+   "children": [
+    {
+     "name": "Assigments", "size": 1
+    },
+    {
+     "name": "Essays", "size": 1
+    },
+    {
+     "name": "Project Reports", "size": 1
+    },
+    {
+     "name": "Exams", "size": 1
+    },
+       {
+     "name": "Personal Blog", "size": 1
+    }
+   ]
+  },
+    {
+   "name": "Pet",
+   "children": [
+    {
+     "name": "Lily", "size": 1
+    },
+    {
+     "name": "Ash", "size": 1
+    }
+   ]
+  }
+ ]
+}

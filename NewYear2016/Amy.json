@@ -1,0 +1,221 @@
+{
+ "name": "Amy",
+ "children": [
+  {
+   "name": "Work",
+   "children": [
+    {
+     "name": "Summer Intern at American Express", "size": 2.5
+    },
+    {
+     "name": "Graudate Assistant at Fordham University", "size": 0.6
+    }
+   ]
+  },
+  {
+   "name": "School",
+   "children": [
+    {
+     "name": "Capstone Project", "size": 0.5
+    },
+    {
+     "name": "Hackathon", "size": 0.5
+    },
+    {
+     "name": "MS Statistics",
+     "children": [
+    {
+     "name": "Explanatory Models", "size": 0.5
+    },
+    {
+     "name": "Statistics Theory I", "size": 0.5
+    },
+    {
+     "name": "Statistics Theory II", "size": 0.5
+    },
+    {
+     "name": "Sampling Theory", "size": 0.5
+    },
+    {
+     "name": "Stat Method & Computation I", "size": 0.5
+    },
+    {
+     "name": "Data Algorithms for Analysis", "size": 0.5
+    },
+    {
+     "name": "Data Driven Marketing Decision", "size": 0.5
+    },
+    {
+     "name": "Database Management", "size": 0.5
+    },
+    {
+     "name": "Data Mining for Business", "size": 0.5
+    },
+    {
+     "name": "Web Analytics", "size": 0.5
+    }
+
+   ]
+    },
+    {
+     "name": "Johns Hopkins Data Science Specialization", 
+     "children": [
+    {
+     "name": "Data Science Toolbox", "size": 0.5
+    },
+    {
+     "name": "R Programming", "size": 0.5
+    },
+    {
+     "name": "Getting and Cleaning Data", "size": 0.5
+    },
+    {
+     "name": "Exploratory Data Analysis", "size": 0.5
+    },
+    {
+     "name": "Reproducible Research", "size": 0.5
+    },
+    {
+     "name": "Statistical Inference", "size": 0.5
+    },
+    {
+     "name": "Regression Models", "size": 0.5
+    },
+    {
+     "name": "Practical Machine Learning", "size": 0.5
+    },
+    {
+     "name": "Developing Data Product", "size": 0.5
+    }
+   ]
+    },
+    {
+     "name": "Data Visualization Project", "size": 0.5
+    }
+
+   ]
+  },
+  {
+   "name": "Travel",
+   "children": [
+    {
+     "name": "Beijing, China", "size": 0.2
+    },
+    {
+     "name": "Oxford, England", "size": 0.2
+    },
+    {
+     "name": "Tofino, Canada", "size": 0.2
+    },
+    {
+     "name": "Malta", "size": 0.2
+    }, 
+    {
+     "name": "Boston, MA", "size": 0.2
+    }        
+
+   ]
+  },
+  {
+   "name": "Loss",
+   "children": [
+    {
+     "name": "My Father: Jiang ZhenKui", "size": 1
+    }
+   ]
+  },
+  {
+   "name": "Win",
+   "children": [
+   {
+     "name": "MS. Applied Statistics & Decision Making", "size": 1
+    },
+    {
+     "name": "A Full-time Offer in American Express", "size": 1
+    },
+    {
+     "name": "Certified Data Scientist in R", "size": 1
+    },
+    {
+     "name": "U.S. Permanent Resident Card ", "size": 1
+    },
+    {
+     "name": "Top 25% in Kaggle Walmart Competition", "size": 1
+    },
+    {
+     "name": "3rd prize in 9&C's Halloween Costume Contest", "size": 1
+    }
+    
+   ]
+  },
+    {
+   "name": "Reading",
+   "children": [
+    {
+     "name": "JavaScript, The Definitive Guide", "size": 0.5
+    },
+    {
+     "name": "JavaScript: The Good Parts", "size": 0.5
+    },
+    {
+     "name": "A Byte of Python", "size": 0.5
+    },
+    {
+     "name": "Dive Into Python", "size": 0.5
+    },
+    {
+     "name": "Pattern Recognition and Machine Learning", "size": 0.5
+    },
+    {
+     "name": "Machine Learning for Hackers", "size": 0.5
+    },
+    {
+     "name": "Elements of Statistical Learning", "size": 0.5
+    },
+    {
+     "name": "Applied Predictive Modeling", "size": 0.5
+    },
+    {
+     "name": "Data Visualization with D3.js Cookbook", "size": 0.5
+    },
+    {
+     "name": "Beautiful Evidence", "size": 0.5
+    },
+    {
+     "name": "Interactive Data Visualization", "size": 0.5
+    }
+   ]
+  },
+    {
+   "name": "Writing",
+   "children": [
+    {
+     "name": "Assigments", "size": 2
+    },
+    {
+     "name": "Essays", "size": 0.5
+    },
+    {
+     "name": "Project Reports", "size": 1
+    },
+    {
+     "name": "Exams", "size": 1.8
+    },
+       {
+     "name": "Personal Blog", "size": 0.8
+    }
+   ]
+  },
+    {
+   "name": "Pet",
+   "children": [
+    {
+     "name": "Cat: Lily", "size": 1
+    },
+    {
+     "name": "Cat: Ash", "size": 1
+    }
+   ]
+  }
+ ]
+}

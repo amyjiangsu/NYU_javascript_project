@@ -1,0 +1,88 @@
+{
+   "name": "School",
+   "children": [
+   {
+   "name": "Amy",
+   "children": [
+    {
+     "name": "Capstone Project", "size": 0.5
+    },
+    {
+     "name": "Hackathon", "size": 0.5
+    },
+    {
+     "name": "MS Statistics",
+     "children": [
+    {
+     "name": "Explanatory Models", "size": 0.5
+    },
+    {
+     "name": "Statistics Theory I", "size": 0.5
+    },
+    {
+     "name": "Statistics Theory II", "size": 0.5
+    },
+    {
+     "name": "Sampling Theory", "size": 0.5
+    },
+    {
+     "name": "Stat Method & Computation I", "size": 0.5
+    },
+    {
+     "name": "Data Algorithms for Analysis", "size": 0.5
+    },
+    {
+     "name": "Data Driven Marketing Decision", "size": 0.5
+    },
+    {
+     "name": "Database Management", "size": 0.5
+    },
+    {
+     "name": "Data Mining for Business", "size": 0.5
+    },
+    {
+     "name": "Web Analytics", "size": 0.5
+    }
+
+   ]
+    },
+    {
+     "name": "Johns Hopkins Data Science Specialization", 
+     "children": [
+    {
+     "name": "Data Science Toolbox", "size": 0.5
+    },
+    {
+     "name": "R Programming", "size": 0.5
+    },
+    {
+     "name": "Getting and Cleaning Data", "size": 0.5
+    },
+    {
+     "name": "Exploratory Data Analysis", "size": 0.5
+    },
+    {
+     "name": "Reproducible Research", "size": 0.5
+    },
+    {
+     "name": "Statistical Inference", "size": 0.5
+    },
+    {
+     "name": "Regression Models", "size": 0.5
+    },
+    {
+     "name": "Practical Machine Learning", "size": 0.5
+    },
+    {
+     "name": "Developing Data Product", "size": 0.5
+    }
+   ]
+    },
+    {
+     "name": "Data Visualization Project", "size": 0.5
+    }
+
+   ]
+  }
+   ]
+    }

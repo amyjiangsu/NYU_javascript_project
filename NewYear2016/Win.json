@@ -1,0 +1,40 @@
+{
+   "name": "Win",
+   "children": [
+   {
+   "name": "Amy",
+   "children": [
+   {
+     "name": "MS. Applied Statistics & Decision Making", "size": 1
+    },
+    {
+     "name": "A Full-time Offer in American Express", "size": 1
+    },
+    {
+     "name": "Certified Data Scientist in R", "size": 1
+    },
+    {
+     "name": "U.S. Permanent Resident Card ", "size": 1
+    },
+    {
+     "name": "Top 25% in Kaggle Walmart Competition", "size": 1
+    },
+    {
+     "name": "3rd prize in 9&C's Halloween Costume Contest", "size": 1
+    }
+    
+   ]
+  },
+  {
+   "name": "James",
+   "children": [
+    {
+     "name": "Became Godfather to Connor Joyce", "size": 1
+    },
+    {
+     "name": "U.S. Permanent Resident Card ", "size": 1
+    }
+   ]
+  }
+  ]
+  }

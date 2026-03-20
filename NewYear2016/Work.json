@@ -1,0 +1,41 @@
+{
+ "name": "Work",
+ "children": [
+  {
+ "name": "Amy",
+   "children": [
+    {
+     "name": "Summer Intern at American Express", "size": 2.5
+    },
+    {
+     "name": "Graudate Assistant at Fordham University", "size": 0.6
+    }
+   ]
+},
+{
+ "name": "James",
+   "children": [
+    {
+     "name": "ABI, Inc.",
+     "children": [
+    {
+     "name": "Crown 2014 Annual Report", "size": 2
+    },
+    {
+     "name": "Crown 2015 Sustainability Report", "size": 2
+    },
+    {
+     "name": "Crown website launch", "size": 2
+    },
+    {
+     "name": "Crown and GP corporate videos", "size": 2
+    },
+    {
+     "name": "Aptar Organics presentation", "size": 2
+    }
+   ]
+   }
+   ]
+  }
+  ]
+}
